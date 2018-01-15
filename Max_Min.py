@@ -35,14 +35,14 @@ def region_loc(f):
 
     im = cv2.imread(f_4)
     
-    variant_4 = cv2.cvtColor(im, cv2.COLOR_BGR2HSV)
+    variant = cv2.cvtColor(im, cv2.COLOR_BGR2HSV)
 
-    channel_1, channel_2, channel_3 = variant_4[:,:,0] ,variant_4[:,:,1] ,variant_4[:,:,2]
+    channel_1, channel_2, channel_3 = variant[:,:,0] ,variant[:,:,1] ,variant[:,:,2]
 
     x = range(0,1944)
     y = channel_3[:,1100]
     
-    cv2.line(variant_4,(1000,0),(1000,1944),(0,0,255),15)
+    cv2.line(variant,(1000,0),(1000,1944),(0,0,255),15)
     
     
     signal2 = y
